@@ -1,0 +1,175 @@
+body {
+  background: black;
+  overflow: hidden;
+}
+
+.zone1 {
+  transform: translate(-50%);
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform-origin: 50% 50%;
+  perspective: 1200;
+  transform-style: preserve-3d;
+}
+
+.orb {
+  width: 80px;
+  height: 80px;
+  margin-left: -40px;
+  margin-top: -4px;
+  position: absolute;
+  top: 55px;
+  background: black;
+  border-radius: 50%;
+  box-shadow: 0px 0px 25px red;
+  transform: translateZ(0);
+  transform-style: preserve-3d;
+}
+
+.pivot-wrapper {
+  position: absolute;
+  animation: pivoter 8s infinite;
+  transform-origin: bottom left;
+  perspective: 1200;
+  transform-style: preserve-3d;
+}
+
+.pivot {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: black;
+  box-shadow: 0px 0px 15px red;
+  animation: antipivoter 8s infinite;
+  overflow: hidden;
+  border-radius: 50%;
+  transform: translateZ(0);
+  transform-style: preserve-3d;
+}
+
+.level1 .pivot.r {
+  left: 0px;
+}
+
+.level1 .pivot.l {
+  left: -30px;
+}
+
+.level2 .pivot.r {
+  left: 31px;
+}
+
+.level2 .pivot.l {
+  left: -61px;
+}
+
+.level3 .pivot.r {
+  left: 45px;
+}
+
+.level3 .pivot.l {
+  left: -75px;
+}
+
+.level4 .pivot.r {
+  left: 58px;
+}
+
+.level4 .pivot.l {
+  left: -88px;
+}
+
+.level5 .pivot.r {
+  left: 45px;
+}
+
+.level5 .pivot.l {
+  left: -75px;
+}
+
+.level6 .pivot.r {
+  left: 31px;
+}
+
+.level6 .pivot.l {
+  left: -61px;
+}
+
+.level7 .pivot.r {
+  left: 0px;
+}
+
+.level7 .pivot.l {
+  left: -30px;
+}
+
+.level2 {
+  top: 25px;
+  animation-delay: .5s;
+}
+.level2 .pivot {
+ animation-delay: .5s;
+}
+
+.level3 {
+  top: 50px;
+  animation-delay: 1s;
+}
+.level3 .pivot {
+  animation-delay: 1s;
+}
+
+.level4 {
+  top: 75px;
+   animation-delay: 1.5s;
+}
+.level4 .pivot {
+  animation-delay: 1.5s;
+}
+
+.level5 {
+  top: 100px;
+  animation-delay: 2s;
+}
+.level5 .pivot {
+  animation-delay: 2s;
+}
+
+.level6 {
+  top: 125px;
+  animation-delay: 2.5s;
+}
+.level6 .pivot {
+  animation-delay: 2.5s;
+}
+
+.level7 {
+  top: 150px;
+  animation-delay: 3s;
+}
+.level7 .pivot {
+  animation-delay: 3s;
+}
+
+@keyframes pivoter {
+  0% {
+    transform: rotateY(0deg);
+    animation-timing-function: linear;
+  }
+  100% {
+    transform: rotateY(360deg);
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes antipivoter {
+  0% {
+    transform: rotateY(0deg);
+    animation-timing-function: linear;
+  }
+  100% {
+    transform: rotateY(-360deg);
+    animation-timing-function: linear;
+  }
+}
